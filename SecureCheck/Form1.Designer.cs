@@ -134,7 +134,8 @@
             this.comboBox1.ForeColor = System.Drawing.Color.Yellow;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Reset"});
+            "Reset",
+            "Block"});
             this.comboBox1.Location = new System.Drawing.Point(407, 53);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(73, 21);

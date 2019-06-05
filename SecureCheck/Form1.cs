@@ -137,12 +137,12 @@ namespace SecureCheck
             switch (comboBox1.SelectedItem.ToString().Trim())
             {
                 case "Reset":
-                    //MessageBox.Show("You are playing RS");
+                    
                     key = "0xF0000001";//В этом случае отправится такой код и config.ini сбрасывается в 0
                     break;
 
                 case "Block":
-                    //MessageBox.Show("You are playing MS");
+                    
                     key = "0xFF000001";//В этом случае в config.ini запишется 4 и 1
                     break;
 
