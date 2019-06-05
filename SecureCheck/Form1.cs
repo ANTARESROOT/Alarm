@@ -51,7 +51,7 @@ namespace SecureCheck
 
                 //timer1.Start();
             }
-        }
+        }//Одноразовая проверка состояния блокировки
         public void alarm()
         {
             cx:
@@ -88,25 +88,101 @@ namespace SecureCheck
                 
                
             
-        }
+        }//метод постоянного контроля состояния
 
         public void button1_Click(object sender, EventArgs e)
         {
            
             button1.Enabled = false;
+            button1.ForeColor = Color.LightGreen;
             Thread myThread = new Thread(alarm);
             //alarm();
             myThread.Start();
             
         
-        }
+        }//Выполнение методов постоянной проверки состояния
 
         private void button2_Click(object sender, EventArgs e)
         {
             button2.Enabled = false;
+            button2.ForeColor = Color.LightGreen;
             
             check();
             button2.Enabled = true;
+        }//Выполнение методов одноразовой проверки состояния
+
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            button1.ForeColor = Color.LightYellow;
         }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.Red;
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            button2.ForeColor = Color.LightYellow;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.ForeColor = Color.Red;
+        }
+
+        public void ResetCommand()
+        {
+            string key = "";
+            switch (comboBox1.SelectedItem.ToString().Trim())
+            {
+                case "Reset":
+                    //MessageBox.Show("You are playing RS");
+                    key = "0xF0000001";//В этом случае отправится такой код и config.ini сбрасывается в 0
+                    break;
+
+                case "Block":
+                    //MessageBox.Show("You are playing MS");
+                    key = "0xFF000001";//В этом случае в config.ini запишется 4 и 1
+                    break;
+
+                default:
+                    MessageBox.Show("Не верное значение");
+                    break;
+            }
+
+            string url = textBox2.Text;
+            //string key = //textBox3.Text;
+            string Data = "key=" + key + "&" + "done=send";
+
+            System.Net.WebRequest req = System.Net.WebRequest.Create(url + "?" + Data);
+            System.Net.WebResponse resp = req.GetResponse();
+            System.IO.Stream stream = resp.GetResponseStream();
+            System.IO.StreamReader sr = new System.IO.StreamReader(stream);
+            string Out = sr.ReadToEnd();
+            sr.Close();
+
+
+
+        }//Метод сброса счётчика и прочие команды
+
+        private void button3_MouseMove(object sender, MouseEventArgs e)
+        {
+            button3.ForeColor = Color.LightYellow;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.Red;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.LightGreen;
+            button3.Enabled = false;
+
+            ResetCommand();
+            button3.Enabled = true;
+        }//Выполнение команд метода сброса и т.д.
     }
 }

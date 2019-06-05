@@ -8,3 +8,13 @@ C:\Users\Администратор\source\repos\SecureCheck\SecureCheck\obj\Deb
 C:\Users\Администратор\source\repos\SecureCheck\SecureCheck\obj\Debug\SecureCheck.csproj.CoreCompileInputs.cache
 C:\Users\Администратор\source\repos\SecureCheck\SecureCheck\obj\Debug\SecureCheck.exe
 C:\Users\Администратор\source\repos\SecureCheck\SecureCheck\obj\Debug\SecureCheck.pdb
+F:\projects\SecureCheck\SecureCheck\bin\Debug\SecureCheck.exe.config
+F:\projects\SecureCheck\SecureCheck\bin\Debug\SecureCheck.exe
+F:\projects\SecureCheck\SecureCheck\bin\Debug\SecureCheck.pdb
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.csprojAssemblyReference.cache
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.Form1.resources
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.Properties.Resources.resources
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.csproj.GenerateResource.cache
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.csproj.CoreCompileInputs.cache
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.exe
+F:\projects\SecureCheck\SecureCheck\obj\Debug\SecureCheck.pdb
